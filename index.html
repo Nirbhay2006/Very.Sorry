@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SORRY to soumya</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    h1 {
+        color: #8b0000;
+    }
+
+    h2 {
+        color: #7fff00;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+    #noButton, #yesButton{
+    background: white;
+    padding:8px 16px;
+    border:none;
+    border-radius:50px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>I tried to talk about something but you were not even replying?&#x1F615;</h1>
+    <h2>maybe i was being to clingy?&#x1F631;</h2>
+    <button id="noButton" >no</button>
+    <button id="yesButton">yes</button>
+    <img id="image" src="https://media1.giphy.com/media/lEEpnHebCjUYM/giphy.gif?cid=6c09b952hhnw9hmh69dciag9krkxpdh2ubyeourjeev5si1h&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Placeholder Image">
+</div>
+
+<script>
+    let clickCount = 0;
+
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+    const heading = document.querySelector('h1');
+    const subheading = document.querySelector('h2');
+    const image = document.getElementById('image');
+
+    const imageUrls = [
+        'https://media3.giphy.com/media/9JLOGsEfPjpR1179HE/giphy.gif?cid=6c09b9520rub2twsm2iuawin7hxnyauoz1lmo4941gccmwdn&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g',
+        'https://media4.giphy.com/media/OUEaBMDGNueha/giphy.gif?cid=6c09b952s71itq2e0uyk5rroud4dr3or2aejvj5si55x3naa&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g',
+        'https://media1.giphy.com/media/um2kBnfo55iW4ZH1Fa/giphy.gif?cid=6c09b952bgcln4uviibhecns3f0vlyduyav1b55ch74butdm&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g',
+        'https://media4.giphy.com/media/QN3pbR3iinnsGXWUgM/giphy.gif?cid=6c09b952p9nk924guve49us86og3fz7dorprc172gddsczqp&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g',
+        'https://media3.giphy.com/media/RWUqVYucDBD4A/giphy.gif?cid=6c09b952pp5kr4mgnvu2xogfn7udj1jxc8xzrx1zs2wksl7s&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g',
+        
+    ];
+
+    yesButton.addEventListener('click', () => {
+        clickCount++;
+        if (clickCount === 1) {
+            heading.textContent = "SORRY for my behaviour ";
+            subheading.textContent = `"i thought maybe you dont want to talk so i stopped but i thought maybe i should atleast say sorry".`;
+            image.src = imageUrls[clickCount ];
+        }
+      if (clickCount === 2) {
+            heading.textContent = "tune snap aur insta se bhi remove ker diya ";
+            subheading.textContent = `"to naa mai msg ker paya, insta pr kiye par pata nahi tuje show bhi hue the yaa nii".`;
+            image.src = imageUrls[clickCount ];
+        }
+      if (clickCount === 3) {
+            heading.textContent = "If you are seeing this ";
+            subheading.textContent = `" atleast ek baar bol diya hota, ab muje to pata hi nahi hota ki ab jyada ho raha hai ".`;
+            image.src = imageUrls[clickCount ];
+        }
+      if (clickCount === 4) {
+            heading.textContent = "so if you are seeing this, to ek baar try reply dena ";
+            subheading.textContent = `" SORRY '-' , ab isse jyada muje nahi pata kya type keru muje to itna likhne me bhi jaan nikal gayi ".`;
+            image.src = imageUrls[clickCount ];
+        }
+        if (clickCount === 5) {
+            heading.textContent = "did i irritated you too much ";
+            subheading.textContent = `" i dont know what to say now".`;
+            yesButton.style.display = "none"; 
+            noButton.style.display = "inline-block";
+          
+        }
+    });
+
+    noButton.addEventListener('click', () => {
+        heading.textContent = "	At last, SORRY  ^_^  ";
+        subheading.textContent = "i wll not disturb again. ";
+          image.src = "https://media4.giphy.com/media/H4j6zA8T1dfLHcCueu/giphy.gif?cid=6c09b952jj9c0c96m8cgcdykypn6mi4fb59krpr7hefvkcyx&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g";
+        yesButton.disabled = true;
+        noButton.disabled = true;
+        yesButton.style.display = "none";
+        noButton.style.display = "none";
+    });
+</script>
+
+</body>
+</html>
